@@ -8,6 +8,7 @@ public class Enclos {
 	private int nbAnimauxMax;
 	private Animal[] tabAnimaux;
 	private Soigneur soigneur;
+	private Espece espece;
 
 	public Enclos(int surface, String nom) throws IllegalArgumentException {
 		if ( surface <= 0 || nom == null) {
@@ -35,7 +36,7 @@ public class Enclos {
 
 	public void setNom(String nom) throws IllegalArgumentException {
 		if ( nom == null) {
-			throw new IllegalArgumentException("Valeur incorrecte : aucune valeur null ou en dessous de 0");
+			throw new IllegalArgumentException("Valeur incorrecte : nom null");
 		}
 		this.nom = nom;
 	}
@@ -46,7 +47,7 @@ public class Enclos {
 
 	public void setSoigneur(Soigneur soigneur) throws IllegalArgumentException{
 		if  ( soigneur == null) {
-			throw new IllegalArgumentException("Valeur incorrecte : aucune valeur null ou en dessous de 0");
+			throw new IllegalArgumentException("Valeur incorrecte : soigneur null");
 		}
 		this.soigneur = soigneur;
 	}
@@ -57,13 +58,17 @@ public class Enclos {
 
 	public void setNbAnimauxMax(int nbAnimauxMax) throws IllegalArgumentException{
 		if  ( nbAnimauxMax <= 0) {
-			throw new IllegalArgumentException("Valeur incorrecte : aucune valeur null ou en dessous de 0");
+			throw new IllegalArgumentException("Valeur incorrecte : nbAnimauxMax <= 0");
 		}
 		this.nbAnimauxMax = nbAnimauxMax;
+		nbAnimauxMax = espece.getTailleGroupeMax();
 		this.tabAnimaux = new Animal[nbAnimauxMax]; 
 	}
 
-	public void ajouterAnimal( Animal animal) {
+	public void ajouterAnimal( Animal animal) throws IllegalArgumentException {
+		if  ( animal.getEspece() != tabAnimaux[0].getEspece()) {
+			throw new IllegalArgumentException("Une seule espece par enclos !!");
+		}
 		if ( nbAnimaux >= nbAnimauxMax ) {
 			System.out.println("Il y a déja beaucoup d'animaux dans cet enclos !!");
 		} else {

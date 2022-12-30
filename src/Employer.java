@@ -29,5 +29,7 @@ public class Employer {
 	public void direBonjour() {
 		this.parler("Je suis un employer du zoo : " +zoo.getNomZoo());
 	}
+	
+	
 
 }
