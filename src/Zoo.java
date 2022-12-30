@@ -31,5 +31,16 @@ public class Zoo {
 	}
 	
 	
+	public StringBuilder extraireZoo() {
+		StringBuilder texte = new StringBuilder();
+		texte.append("let zoo = [ ");
+		for ( int i = 0; i < nbEnclos; i++ ) {
+			texte.append("\n" +tabEnclosZoo[i].getNom() +" , " +tabEnclosZoo[i].getSurface() +" , " +tabEnclosZoo[i].getNbAnimaux() +"/" +tabEnclosZoo[i].getNbAnimauxMax());
+		}
+		texte.append("]");
+		return texte;
+	}
+	
+	
 	
 }

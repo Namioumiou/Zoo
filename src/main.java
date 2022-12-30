@@ -11,7 +11,7 @@ public class main {
 		zoo.ajouterEnclos(enclos1);
 		enclos1.getSoigneur();
 		Espece espece1 = new Espece("Félins", 100, 50, 5);
-		Animal animal1 = new Animal(espece1,"Tsuki", 20,"F");
+		Animal animal1 = new Animal(espece1,"Tsuki", 20, 5,"F");
 		enclos1.setNbAnimauxMax(espece1.getTailleGroupeMax());
 		enclos1.ajouterAnimal(animal1);
 		System.out.println(enclos1.desciptionEnclosFull());
@@ -40,11 +40,11 @@ public class main {
 		System.out.println(agent.nettoyerPark());
 
 
-		/*Animal animal2 = new Animal(espece1,"Meli", 50,"F");
+		/*Animal animal2 = new Animal(espece1,"Meli", 50, 3,"F");
 		enclos1.ajouterAnimal(animal2);
 		System.out.println(enclos1.DesciptionEnclosFull());
 
-		Animal animal3 = new Animal(espece1,"Louna", 40,"F");
+		Animal animal3 = new Animal(espece1,"Louna", 40, 5,"F");
 		enclos1.ajouterAnimal(animal3);
 		System.out.println(enclos1.DesciptionEnclosFull());
 		enclos1.enleverAnimal(animal2);

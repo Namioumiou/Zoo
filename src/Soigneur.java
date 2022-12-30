@@ -66,6 +66,18 @@ public class Soigneur extends Employer {
 	public String desciptionSoigneurFull() {
 		return toString() +" : " +listeEnclos();
 	}
+	
+	
+	public StringBuilder extraireSoigneur() {
+		StringBuilder texte = new StringBuilder();
+		texte.append("let soigneur = [ ");
+		for ( int i = 0; i < nbEnclos; i++ ) {
+			texte.append("\n" +tabEnclos[i].getNom() +" , " +tabEnclos[i].getSurface() +" , " +tabEnclos[i].getNbAnimaux() +"/" +tabEnclos[i].getNbAnimauxMax());
+		}
+		texte.append("]");
+		return texte;
+		
+	}
 
 
 }

@@ -112,6 +112,17 @@ public class Enclos {
 		return enclos.nom == nom ;
 	}
 	
+	/* Partie OCamel */
+	
+	public StringBuilder extraireEnclos() {
+		StringBuilder texte = new StringBuilder();
+		texte.append("let zoo = [ ");
+		for ( int i = 0; i < nbAnimaux; i++ ) {
+			texte.append("\n" +tabAnimaux[i].getEspece() +" , " +tabAnimaux[i].getNom() +" , " +tabAnimaux[i].getTaille() +" , " +tabAnimaux[i].getPoid() +"/" +tabAnimaux[i].getSexe());
+		}
+		texte.append("]");
+		return texte;
+	}
 
 
 

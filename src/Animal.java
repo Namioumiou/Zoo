@@ -5,14 +5,16 @@ public class Animal {
 	private Enclos enclos;
 	private String sexe;
 	private Espece espece;
+	private int poid;
 
-	public Animal(Espece espece, String nom, int taille, String sexe) throws IllegalArgumentException{
+	public Animal(Espece espece, String nom, int taille, int poid, String sexe) throws IllegalArgumentException{
 		if ( espece == null || nom == null || taille <= 0 || sexe == null) {
 			throw new IllegalArgumentException("Valeur incorrecte : aucune valeur null ou en dessous de 0");
 		}
 		this.espece = espece;
 		this.nom = nom;
 		this.taille = taille;
+		this.poid = poid;
 		this.sexe = sexe;
 	}
 
@@ -33,6 +35,14 @@ public class Animal {
 			throw new IllegalArgumentException("Valeur incorrecte : aucune valeur null ou en dessous de 0");
 		}
 		this.taille = taille;
+	}
+
+	public int getPoid() {
+		return poid;
+	}
+
+	public void setPoid(int poid) {
+		this.poid = poid;
 	}
 
 	public Enclos getEnclos() {
