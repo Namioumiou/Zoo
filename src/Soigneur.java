@@ -63,7 +63,7 @@ public class Soigneur extends Employer {
 		+" enclos";
 	}
 	
-	public String DesciptionSoigneurFull() {
+	public String desciptionSoigneurFull() {
 		return toString() +" : " +listeEnclos();
 	}
 

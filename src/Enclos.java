@@ -103,7 +103,7 @@ public class Enclos {
 		return "L'enclos " +getNom() +" à une surface de " +getSurface() +" et abrite " +getNbAnimaux() +"/" +getNbAnimauxMax() +" animaux";
 	}
 	
-	public String DesciptionEnclosFull() {
+	public String desciptionEnclosFull() {
 		return toString() +" : " +listeAnimaux();
 	}
 

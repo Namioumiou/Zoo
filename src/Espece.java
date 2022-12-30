@@ -35,7 +35,7 @@ public class Espece {
 	}
 
 
-	public float getPoidsM() {
+	public int getPoidsM() {
 		return poidsM;
 	}
 

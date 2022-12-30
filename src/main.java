@@ -14,15 +14,15 @@ public class main {
 		Animal animal1 = new Animal(espece1,"Tsuki", 20,"F");
 		enclos1.setNbAnimauxMax(espece1.getTailleGroupeMax());
 		enclos1.ajouterAnimal(animal1);
-		System.out.println(enclos1.DesciptionEnclosFull());
+		System.out.println(enclos1.desciptionEnclosFull());
 		System.out.println(animal1.toString());
-		System.out.println(soigneur1.DesciptionSoigneurFull());
+		System.out.println(soigneur1.desciptionSoigneurFull());
 		System.out.println(zoo.toString());
 		
 		Enclos enclos2 = new Enclos(15,"2");
 		soigneur1.ajouterEnclosAGerer(enclos2);
 		zoo.ajouterEnclos(enclos2);
-		System.out.println(soigneur1.DesciptionSoigneurFull());
+		System.out.println(soigneur1.desciptionSoigneurFull());
 		/*soigneur1.enleverEnclos(enclos2);
 		System.out.println(soigneur1.DesciptionSoigneurFull());*/
 
@@ -31,9 +31,9 @@ public class main {
 		Enclos enclos3 = new Enclos(15,"3");
 		soigneur1.ajouterEnclosAGerer(enclos3);
 		zoo.ajouterEnclos(enclos3);
-		System.out.println(soigneur1.DesciptionSoigneurFull());
+		System.out.println(soigneur1.desciptionSoigneurFull());
 		soigneur1.enleverEnclos(enclos2);
-		System.out.println(soigneur1.DesciptionSoigneurFull());
+		System.out.println(soigneur1.desciptionSoigneurFull());
 
 		AgentEntretien agent = new AgentEntretien("agent1",2,zoo);
 		agent.direBonjour();
