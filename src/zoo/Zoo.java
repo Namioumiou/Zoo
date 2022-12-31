@@ -32,7 +32,7 @@ public class Zoo {
 	}
 	
 	
-	public StringBuilder extraireZoo() {
+	/*public StringBuilder extraireZoo() {
 		StringBuilder texte = new StringBuilder();
 		texte.append("let zoo = [ ");
 		for ( int i = 0; i < nbEnclos; i++ ) {
@@ -40,7 +40,7 @@ public class Zoo {
 		}
 		texte.append("]");
 		return texte;
-	}
+	}*/
 	
 	
 	

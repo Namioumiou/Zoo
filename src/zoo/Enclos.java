@@ -24,6 +24,17 @@ public class Enclos {
 		return nom;
 	}
 
+	public Espece getEspece() {
+		return espece;
+	}
+
+	public void setEspece(Espece espece) throws IllegalArgumentException {
+		if ( nbAnimaux != 0) {
+			throw new IllegalArgumentException("Impossible de changer l'espèce de l'enclos car il y a encore des animaux de dans !!");
+		}
+		this.espece = espece;
+	}
+
 	public int getSurface() {
 		return surface;
 	}
