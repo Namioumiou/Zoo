@@ -1,3 +1,4 @@
+package zoo;
 public class Zoo {
 	
 	private String nomZoo;

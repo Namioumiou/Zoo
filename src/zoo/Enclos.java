@@ -1,4 +1,4 @@
-
+package zoo;
 
 public class Enclos {
 
@@ -10,12 +10,14 @@ public class Enclos {
 	private Soigneur soigneur;
 	private Espece espece;
 
-	public Enclos(int surface, String nom) throws IllegalArgumentException {
+	public Enclos(int surface, String nom, Espece espece) throws IllegalArgumentException {
 		if ( surface <= 0 || nom == null) {
 			throw new IllegalArgumentException("Valeur incorrecte : aucune valeur null ou en dessous de 0");
 		}
 		this.surface = surface;
 		this.nom = nom;
+		this.espece = espece;
+		setNbAnimauxMax();
 	}
 
 	public String getNom() {
@@ -56,17 +58,13 @@ public class Enclos {
 		this.soigneur = null;
 	}
 
-	public void setNbAnimauxMax(int nbAnimauxMax) throws IllegalArgumentException{
-		if  ( nbAnimauxMax <= 0) {
-			throw new IllegalArgumentException("Valeur incorrecte : nbAnimauxMax <= 0");
-		}
-		this.nbAnimauxMax = nbAnimauxMax;
+	private void setNbAnimauxMax() {
 		nbAnimauxMax = espece.getTailleGroupeMax();
 		this.tabAnimaux = new Animal[nbAnimauxMax]; 
 	}
 
 	public void ajouterAnimal( Animal animal) throws IllegalArgumentException {
-		if  ( animal.getEspece() != tabAnimaux[0].getEspece()) {
+		if  ( nbAnimaux != 0 && animal.getEspece() != tabAnimaux[0].getEspece()) {
 			throw new IllegalArgumentException("Une seule espece par enclos !!");
 		}
 		if ( nbAnimaux >= nbAnimauxMax ) {
@@ -119,7 +117,7 @@ public class Enclos {
 	
 	/* Partie OCamel */
 	
-	public StringBuilder extraireEnclos() {
+	/*public StringBuilder extraireEnclos() {
 		StringBuilder texte = new StringBuilder();
 		texte.append("let zoo = [ ");
 		for ( int i = 0; i < nbAnimaux; i++ ) {
@@ -127,7 +125,7 @@ public class Enclos {
 		}
 		texte.append("]");
 		return texte;
-	}
+	}*/
 
 
 

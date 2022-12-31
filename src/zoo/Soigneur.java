@@ -1,3 +1,5 @@
+package zoo;
+
 public class Soigneur extends Employer {
 
 	private final int nbEnclosMax = 5;
@@ -68,7 +70,7 @@ public class Soigneur extends Employer {
 	}
 	
 	
-	public StringBuilder extraireSoigneur() {
+	/*public StringBuilder extraireSoigneur() {
 		StringBuilder texte = new StringBuilder();
 		texte.append("let soigneur = [ ");
 		for ( int i = 0; i < nbEnclos; i++ ) {
@@ -77,7 +79,7 @@ public class Soigneur extends Employer {
 		texte.append("]");
 		return texte;
 		
-	}
+	}*/
 
 
 }
