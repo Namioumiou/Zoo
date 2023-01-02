@@ -114,7 +114,7 @@ public class Enclos {
 
 	@Override
 	public String toString() {
-		return "L'enclos " +getNom() +" à une surface de " +getSurface() +" et abrite " +getNbAnimaux() +"/" +getNbAnimauxMax() +" animaux";
+		return "L'enclos " +getNom() +" à une surface de " +getSurface() +" et abrite " +getNbAnimaux() +"/" +getNbAnimauxMax() +" animaux de l'espèce : " +getEspece();
 	}
 	
 	public String desciptionEnclosFull() {
