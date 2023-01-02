@@ -47,8 +47,6 @@ public class TestEnclos {
 	@Test
 	public void testAttributionAnimal() {	
 		enclos.ajouterAnimal(animal1);
-		System.out.println(enclos.getNbAnimaux());
-		System.out.println(enclos.getNbAnimauxMax());
 		assertTrue(1 == enclos.getNbAnimaux());
 		System.out.println("testAttributionAnimal passed with success");
 	}
@@ -80,9 +78,9 @@ public class TestEnclos {
 	}
 	
 	@Test
-	public void testnbAnimauxMax() {
+	public void testNbAnimauxMax() {
 		assertTrue (3 == enclos.getNbAnimauxMax());
-		System.out.println("testnbAnimauxMax passed with success");
+		System.out.println("testNbAnimauxMax passed with success");
 	}
 	
 	

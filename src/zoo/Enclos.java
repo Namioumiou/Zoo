@@ -11,7 +11,7 @@ public class Enclos {
 	private Espece espece;
 
 	public Enclos(int surface, String nom, Espece espece) throws IllegalArgumentException {
-		if ( surface <= 0 || nom == null) {
+		if ( surface <= 0 || nom == null || espece == null) {
 			throw new IllegalArgumentException("Valeur incorrecte : aucune valeur null ou en dessous de 0");
 		}
 		this.surface = surface;
@@ -75,8 +75,8 @@ public class Enclos {
 	}
 
 	public void ajouterAnimal( Animal animal) throws IllegalArgumentException {
-		if  ( nbAnimaux != 0 && animal.getEspece() != tabAnimaux[0].getEspece()) {
-			throw new IllegalArgumentException("Une seule espece par enclos !!");
+		if  ( animal.getEspece() != getEspece()) {
+			throw new IllegalArgumentException("L'enclos n'est pas fait pour abriter cette espèce !!");
 		}
 		if ( nbAnimaux >= nbAnimauxMax ) {
 			System.out.println("Il y a déja beaucoup d'animaux dans cet enclos !!");
@@ -100,7 +100,7 @@ public class Enclos {
 			} 
 		}
 		if(!found) {
-			System.out.println("Le soigneur ne s'occupe pas de cet enclos");
+			System.out.println("L'animal n'est pas dans cet enclos !!");
 		}	
 	}
 
@@ -114,7 +114,7 @@ public class Enclos {
 
 	@Override
 	public String toString() {
-		return "L'enclos " +getNom() +" à une surface de " +getSurface() +" et abrite " +getNbAnimaux() +"/" +getNbAnimauxMax() +" animaux de l'espèce : " +getEspece();
+		return "L'enclos " +getNom() +" à une surface de " +getSurface() +" et abrite " +getNbAnimaux() +"/" +getNbAnimauxMax() +" animaux de l'espèce : " +espece.getNomEspece();
 	}
 	
 	public String desciptionEnclosFull() {

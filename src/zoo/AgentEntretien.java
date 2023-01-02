@@ -20,7 +20,7 @@ public class AgentEntretien extends Employer{
 	
 	@Override
 	public String toString() {
-		return "L'agent d'entretien numéro " +getId() +" a pour nom : " +super.getNom() +".";
+		return "L'agent d'entretien numéro " +getId() +" a pour nom : " +getNom() +".";
 	}
 
 }

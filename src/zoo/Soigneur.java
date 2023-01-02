@@ -17,7 +17,7 @@ public class Soigneur extends Employer {
 	public int getNbEnclos() {
 		return nbEnclos;
 	}
-
+	
 	public void ajouterEnclosAGerer( Enclos enclosPlus) {
 		if ( nbEnclos >= nbEnclosMax ) {
 			System.out.println("Le soigneur s'occupe déja de beaucoup d'enclos.");
@@ -61,8 +61,7 @@ public class Soigneur extends Employer {
 
 	@Override
 	public String toString() {
-		return "Le soigneur numéro " +getId() +" a pour nom : " +super.getNom() +". Il s'occupde de " +getNbEnclos() +"/" +getNbEnclosMax()
-		+" enclos";
+		return "Le soigneur numéro " +getId() +" a pour nom : " +getNom() +". Il s'occupde de " +getNbEnclos() +"/" +getNbEnclosMax() +" enclos";
 	}
 	
 	public String desciptionSoigneurFull() {

@@ -10,7 +10,7 @@ public class Animal {
 	private int poid;
 
 	public Animal(Espece espece, String nom, int taille, int poid, String sexe) throws IllegalArgumentException{
-		if ( espece == null || nom == null || taille <= 0 || sexe == null) {
+		if ( espece == null || nom == null || taille <= 0 || poid <= 0 || sexe == null) {
 			throw new IllegalArgumentException("Valeur incorrecte : aucune valeur null ou en dessous de 0");
 		}
 		this.espece = espece;
@@ -34,7 +34,7 @@ public class Animal {
 
 	public void setTaille(int taille) throws IllegalArgumentException {
 		if ( taille <= 0) {
-			throw new IllegalArgumentException("Valeur incorrecte : aucune valeur null ou en dessous de 0");
+			throw new IllegalArgumentException("Valeur incorrecte : taille inférieur ou égale a 0");
 		}
 		this.taille = taille;
 	}
@@ -43,7 +43,10 @@ public class Animal {
 		return poid;
 	}
 
-	public void setPoid(int poid) {
+	public void setPoid(int poid) throws IllegalArgumentException{
+		if ( poid <= 0) {
+			throw new IllegalArgumentException("Valeur incorrecte : poid inférieur ou égal a 0");
+		}
 		this.poid = poid;
 	}
 
@@ -53,7 +56,7 @@ public class Animal {
 
 	public void setEnclos(Enclos enclos) throws IllegalArgumentException{
 		if ( enclos == null) {
-			throw new IllegalArgumentException("Valeur incorrecte : aucune valeur null ou en dessous de 0");
+			throw new IllegalArgumentException("Valeur incorrecte : valeur de enclos null");
 		}
 		this.enclos = enclos;
 	}
@@ -72,11 +75,11 @@ public class Animal {
 
 	@Override
 	public String toString() {
-		return "Je m'appel "+ nom + ", je fais " + taille +"cm, je suis un " +sexe +" et je suis dans l'enclos : " + enclos.getNom();
+		return "Je m'appel "+ nom + ", je fais " + taille +"cm, je pèse " +poid +"kg, je suis un " +espece.getNomEspece() +" de sexe : " +sexe +" et je suis dans l'enclos : " + enclos.getNom();
 	}
 
 	public boolean equals(Animal animal) {
-		return animal.nom == nom && animal.taille == taille && animal.sexe == sexe && animal.espece == espece;
+		return animal.nom == nom && animal.taille == taille && animal.poid == poid && animal.sexe == sexe && animal.espece == espece;
 	}
 	
 

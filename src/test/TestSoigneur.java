@@ -83,9 +83,9 @@ public class TestSoigneur {
 	}
 	
 	@Test
-	public void testnbEnclosMax() {
+	public void testNbEnclosMax() {
 		assertTrue (5 == s1.getNbEnclosMax());
-		System.out.println("testnbEnclosMax passed with success");
+		System.out.println("testNbEnclosMax passed with success");
 	}
 	
 	@Test
@@ -93,7 +93,7 @@ public class TestSoigneur {
 		s1.ajouterEnclosAGerer(enclos1);
 		enclos1.ajouterAnimal(animal1);
 		if (animal1.getSoigneurAnimal().equals("C'est le soigneur Soigneur1 (1) qui s'occupe de l'enclos ou est Tsuki")) {
-			System.out.println("testChekInventoryBeforeUse passed with success");
+			System.out.println("testSoigneurOccupeAnimal passed with success");
 		}
 	}
 

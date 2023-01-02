@@ -19,7 +19,6 @@ public class main {
 		Enclos enclos1 = new Enclos(15,"1",espece1);
 		soigneur1.ajouterEnclosAGerer(enclos1);
 		zoo.ajouterEnclos(enclos1);
-		enclos1.getSoigneur();
 		enclos1.ajouterAnimal(animal1);
 		System.out.println(enclos1.desciptionEnclosFull());
 		System.out.println(animal1.toString());

@@ -6,7 +6,7 @@ public class Zoo {
 	private int nbEnclos = 0;
 	private Enclos[] tabEnclosZoo = new Enclos[NBENCLOSMAXZOO];
 
-	public Zoo(String nomZoo) {
+	public Zoo(String nomZoo) throws IllegalArgumentException {
 		if ( nomZoo == null ) {
 			throw new IllegalArgumentException("Valeur incorrecte : aucune valeur null ou en dessous de 0");
 		}
@@ -28,7 +28,7 @@ public class Zoo {
 
 	@Override
 	public String toString() {
-		return "Bonjour, nous somme le zoo : " +getNomZoo() +". Bienvenue a toi. Nous avons " +nbEnclos +" dans notre zoo que tu vas pouvoir découvrir.";
+		return "Bonjour, nous somme le zoo : " +getNomZoo() +". Bienvenue a toi. Nous avons " +nbEnclos +" enclos dans notre zoo que tu vas pouvoir découvrir.";
 	}
 	
 	

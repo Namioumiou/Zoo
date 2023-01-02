@@ -22,13 +22,17 @@ public class Employer {
 	public int getId() {
 		return id;
 	}
+	
+	public Zoo getZoo() {
+		return zoo;
+	}
 
 	public void parler(String texte) {
 		System.out.println(this.getNom() +" (" +this.getId() +") : " +texte);
 	}
 
 	public void direBonjour() {
-		this.parler("Je suis un employer du zoo : " +zoo.getNomZoo());
+		this.parler("Je suis un employé du zoo : " +zoo.getNomZoo());
 	}
 	
 	
